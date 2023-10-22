@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+
+import os
+import sys
+
+from pathlib import Path
+
+
+LOCAL_BIN = Path("/home/asperoph/bin")
+
+
+def main():
+    cmd = sys.argv[1]
+
+    src = Path.cwd() / cmd
+    dest = LOCAL_BIN / cmd
+
+    os.symlink(src, dest)
+
+
+if __name__ == "__main__":
+    main()

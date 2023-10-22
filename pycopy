@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+import sys
+import pyperclip
+
+
+def main():
+    pyperclip.copy(sys.stdin.read()) 
+
+
+if __name__ == "__main__":
+    main()
