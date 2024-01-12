@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+
+import sys
+import pyperclip
+from pathlib import Path
+
+def main():
+    try:
+        filepath = Path.cwd() / sys.argv[1]
+    except IndexError:
+        sys.stderr.write("Usage: abspath <filename>")
+        return
+    sys.stdout.write(str(filepath))
+
+
+if __name__ == "__main__":
+    main()
